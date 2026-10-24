@@ -1,0 +1,29 @@
+{
+  "name": "poolwheels",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "cap:add": "npx cap add android && npx cap add ios",
+    "cap:sync": "npm run build && npx cap sync",
+    "cap:assets": "npx capacitor-assets generate --iconBackgroundColor #0B1F33 --splashBackgroundColor #0B1F33"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/cli": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/ios": "^6.1.2",
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.0",
+    "@capacitor/assets": "^3.0.5"
+  },
+  "description": "Group car buying for India: pool buyers, make dealers compete.",
+  "license": "MIT"
+}
