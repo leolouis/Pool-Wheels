@@ -6,7 +6,7 @@
 
 **Group car buying for India. Pool buyers, make dealers compete, buy on your terms.**
 
-[![CI](https://img.shields.io/github/actions/workflow/status/YOUR-USERNAME/poolwheels/ci.yml?branch=main&label=build&logo=github)](https://github.com/YOUR-USERNAME/poolwheels/actions)
+[![CI](https://img.shields.io/github/actions/workflow/status/leolouis/poolwheels/ci.yml?branch=main&label=build&logo=github)](https://github.com/leolouis/poolwheels/actions)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
@@ -17,7 +17,7 @@
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-FF7A1A.svg)](CONTRIBUTING.md)
 [![Status](https://img.shields.io/badge/status-early%20prototype-orange)](#-roadmap)
 
-[Live demo](https://YOUR-USERNAME.github.io/poolwheels/) · [Architecture](docs/ARCHITECTURE.md) · [Report a bug](../../issues/new?template=bug_report.md) · [Request a feature](../../issues/new?template=feature_request.md)
+[Live demo](https://leolouis.github.io/poolwheels/) · [Architecture](docs/ARCHITECTURE.md) · [Report a bug](../../issues/new?template=bug_report.md) · [Request a feature](../../issues/new?template=feature_request.md)
 
 </div>
 
