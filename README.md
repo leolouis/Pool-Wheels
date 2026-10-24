@@ -1,12 +1,10 @@
 <div align="center">
-
-<img src="assets/banner.png" alt="PoolWheels: buy your car with 19 others" width="720" />
-
-# 🚗 PoolWheels
-
+<img src="assets/banner.png" alt="Pool Wheels: buy your car with 19 others" width="720" />
+# 🚗 Pool Wheels
+ 
 **Group car buying for India. Pool buyers, make dealers compete, buy on your terms.**
-
-[![CI](https://img.shields.io/github/actions/workflow/status/leolouis/poolwheels/ci.yml?branch=main&label=build&logo=github)](https://github.com/leolouis/poolwheels/actions)
+ 
+[![CI](https://img.shields.io/github/actions/workflow/status/leolouis/Pool-Wheels/ci.yml?branch=main&label=build&logo=github)](https://github.com/leolouis/Pool-Wheels/actions)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
@@ -16,13 +14,12 @@
 [![iOS](https://img.shields.io/badge/iOS-ready-000000?logo=apple&logoColor=white)](#-build-the-android-and-ios-apps)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-FF7A1A.svg)](CONTRIBUTING.md)
 [![Status](https://img.shields.io/badge/status-early%20prototype-orange)](#-roadmap)
-
-[Live demo](https://leolouis.github.io/poolwheels/) · [Architecture](docs/ARCHITECTURE.md) · [Report a bug](../../issues/new?template=bug_report.md) · [Request a feature](../../issues/new?template=feature_request.md)
-
+ 
+[Live demo](https://leolouis.github.io/Pool-Wheels/) · [Architecture](docs/ARCHITECTURE.md) · [Report a bug](../../issues/new?template=bug_report.md) · [Request a feature](../../issues/new?template=feature_request.md)
+ 
 </div>
-
 ---
-
+ 
 ## 📑 Table of contents
 - [💡 The idea](#-the-idea)
 - [✨ Features](#-features)
@@ -41,14 +38,13 @@
 - [🤝 Contributing](#-contributing)
 - [🏷 Suggested GitHub topics](#-suggested-github-topics)
 - [📄 License](#-license)
-
 ## 💡 The idea
 In India, buying a car is a one-on-one negotiation where the buyer has the least leverage. A dealer sees one buyer as one sale. The same dealer sees 20 confirmed buyers as a month's target.
-
-PoolWheels pools 15 to 20 buyers who want the same car in the same city, asks several dealerships to bid for the whole group, and shows every bid as an itemised on-road price. Each buyer then decides **individually**. No commitment until you say yes.
-
+ 
+Pool Wheels pools 15 to 20 buyers who want the same car in the same city, asks several dealerships to bid for the whole group, and shows every bid as an itemised on-road price. Each buyer then decides **individually**. No commitment until you say yes.
+ 
 **Revenue model:** the platform earns a commission from the dealership, never from the buyer.
-
+ 
 ## ✨ Features
 | | Feature | Status |
 |---|---|---|
@@ -61,14 +57,13 @@ PoolWheels pools 15 to 20 buyers who want the same car in the same city, asks se
 | 🔐 | Login, saved pools across devices | 🛠 Planned |
 | 🏢 | Dealer portal to submit bids | 🛠 Planned |
 | 🔔 | Push notifications (pool full, bids in) | 🛠 Planned |
-
+ 
 ## 🧭 How it works
 1. 👥 **Pool.** Pick a city, model, variant and colour. Join the matching pool.
 2. 🔨 **Bid.** At 20 buyers, 4 to 5 dealerships are invited to bid for the group.
 3. ⚖️ **Compare.** See ex-showroom, insurance, registration and accessories side by side.
 4. ✅ **Decide.** Accept or pass. Your loan and paperwork stay between you and the dealer.
-5. 🚘 **Drive.** The dealer pays PoolWheels a commission. You pay nothing.
-
+5. 🚘 **Drive.** The dealer pays Pool Wheels a commission. You pay nothing.
 ## 🧱 Tech stack
 | Layer | Choice |
 |---|---|
@@ -78,7 +73,7 @@ PoolWheels pools 15 to 20 buyers who want the same car in the same city, asks se
 | Native | Capacitor 6 (Android and iOS) |
 | CI and hosting | GitHub Actions, GitHub Pages (or Vercel / Netlify) |
 | Backend (planned) | Supabase, Firebase or any REST API behind `src/api.js` |
-
+ 
 ## 🗂 Project structure
 ```text
 poolwheels/
@@ -97,28 +92,27 @@ poolwheels/
 ├── index.html
 └── vite.config.js
 ```
-
+ 
 ## 🚀 Quick start
 Requires Node.js 18 or newer.
 ```bash
-git clone https://github.com/YOUR-USERNAME/poolwheels.git
-cd poolwheels
+git clone https://github.com/leolouis/Pool-Wheels.git
+cd Pool-Wheels
 npm install
 npm run dev        # http://localhost:5173
 npm run build      # production build in dist/
 ```
-
+ 
 ## 🌐 Deploy the web version
 **GitHub Pages (automatic).** In your repo go to *Settings → Pages → Source: GitHub Actions*. Every push to `main` runs `.github/workflows/deploy-pages.yml` and publishes `dist/`.
-
+ 
 **Vercel or Netlify.** Import the repo. Build command `npm run build`, output directory `dist`.
-
+ 
 ## 📲 Install as an app (PWA)
 - **Android (Chrome):** menu → *Install app*.
 - **iOS (Safari):** Share → *Add to Home Screen*.
-
 Icons are included: `icon-180.png` (iOS), `icon-192.png`, `icon-512.png`, `icon-maskable-512.png` and `icon.svg`.
-
+ 
 ## 📱 Build the Android and iOS apps
 ```bash
 npm run cap:add        # once: creates android/ and ios/
@@ -128,12 +122,12 @@ npx cap open android   # needs Android Studio
 npx cap open ios       # needs a Mac with Xcode
 ```
 To publish you need a Google Play Console account and an Apple Developer Program membership (paid). Change `appId` in `capacitor.config.json` to a bundle id you own before publishing.
-
+ 
 ## 🔌 Connect a real backend
 Everything the UI needs goes through four functions in `src/api.js`: `listPools`, `joinPool`, `getQuotes` and the pool constants. Replace the in-memory mock with Supabase, Firebase or your own REST API. Copy `.env.example` to `.env` for keys (never commit `.env`). See the suggested data model in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
-
+ 
 Quotes stay empty until real dealer bids exist. The UI never shows invented prices.
-
+ 
 ## 🎨 Brand and assets
 | Token | Value |
 |---|---|
@@ -142,9 +136,9 @@ Quotes stay empty until real dealer bids exist. The UI never shows invented pric
 | Background | `#F4F6F8` |
 | Display font | Bricolage Grotesque |
 | Body font | DM Sans |
-
+ 
 All illustrations and icons are original vector or generated artwork in this repo. No third-party car photos or logos are included. Car model names appear only as plain text labels.
-
+ 
 ## 🛣 Roadmap
 - [ ] Authentication (phone OTP)
 - [ ] Persist pools and members in a database
@@ -153,22 +147,21 @@ All illustrations and icons are original vector or generated artwork in this rep
 - [ ] Push notifications
 - [ ] Hindi and regional language support
 - [ ] End-to-end tests
-
 ## ⚖️ Business and legal notes
 This is a software prototype, not legal or financial advice. Before launch, get advice on: dealer agreements and published commission terms, consumer protection and data privacy rules (including India's DPDP Act), and how financing and insurance referrals are handled. Keep commission rates identical and public across dealers to protect buyer trust.
-
+ 
 ## 🙋 FAQ
 **Does it work today with real dealers?** No. It is a front-end prototype with mock pools. You need a backend and dealer partnerships.
-
+ 
 **Why no car photos?** Manufacturer imagery is copyrighted. Add licensed photos or dealer-supplied images in `public/` when you have rights.
-
+ 
 **Is it free for buyers?** That is the model: dealers pay.
-
+ 
 ## 🤝 Contributing
 See [CONTRIBUTING.md](CONTRIBUTING.md). Security issues: [SECURITY.md](SECURITY.md).
-
+ 
 ## 🏷 Suggested GitHub topics
 `car-buying` `group-buying` `india` `automotive` `marketplace` `react` `vite` `pwa` `capacitor` `android` `ios` `mobile-app` `startup` `fintech` `consumer-tech`
-
+ 
 ## 📄 License
-[MIT](LICENSE) © 2026 PoolWheels contributors
+[MIT](LICENSE) © 2026 Pool Wheels contributors
